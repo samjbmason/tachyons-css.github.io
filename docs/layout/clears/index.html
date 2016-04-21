@@ -45,16 +45,16 @@
     <main class="">
       <article class="bg-near-white bt b--black-10 pa3 ph5-ns">
         <h4 class="f4 mv0 fw6 dib mr4">tachyons-clears</h4>
-        <span class="f4 b dib pl0 ml0 mr4">v2.0.4</span>
-        <span class="f4 b dib pl0 ml0 mr4">92 B</span>
+        <span class="f4 b dib pl0 ml0 mr4">v2.2.0</span>
+        <span class="f4 b dib pl0 ml0 mr4">200 B</span>
         <div>
           <dl class="dib mr4 mt0">
             <dt class="f6 db">Declarations </dt>
-            <dd class="db pl0 ml0 f4 f2-ns b">4</dd>
+            <dd class="db pl0 ml0 f4 f2-ns b">20</dd>
           </dl>
           <dl class="dib mr4">
             <dt class="f6 db pr2">Selectors </dt>
-            <dd class="db pl0 ml0 f4 f2-ns b">4</dd>
+            <dd class="db pl0 ml0 f4 f2-ns b">20</dd>
           </dl>
           <dl class="dib mr4">
             <dt class="f6 db pr2">Max. Specificity Score </dt>
@@ -62,7 +62,7 @@
           </dl>
           <dl class="dib mr4">
             <dt class="f6 db pr2">Size of Avg. Rule </dt>
-            <dd class="db pl0 ml0 f4 f2-ns b">1.3333333333333333</dd>
+            <dd class="db pl0 ml0 f4 f2-ns b">1.0526315789473684</dd>
           </dl>
         </div>
         <p class="measure f4 f3-ns lh-copy">
@@ -107,7 +107,7 @@
       </div>
       <section class="bg-near-white black-70 pt4 pb5">
         <header class="ph3 ph5-ns pt4">
-          <kbd class="yellow">src/_clearfix.css</kbd>
+          <kbd class="yellow">src/_clears.css</kbd>
         </header>
 <pre class="ph3 ph5-ns">
 <code class="code" style="font-size: .75rem;">
@@ -120,10 +120,34 @@
 /* Nicolas Gallaghers Clearfix solution
    Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
 
-.cf:before,
-.cf:after   { content: " "; display: table; }
-.cf:after   { clear: both; }
-.cf         { *zoom: 1; }
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after             { clear: both; }
+.cf                   { *zoom: 1; }
+.cl                   { clear: left; }
+.cr                   { clear: right; }
+.cb                   { clear: both; }
+.cn                   { clear: none; }
+
+@media screen and (min-width: 48em) {
+ .cl-ns { clear: left; }
+ .cr-ns { clear: right; }
+ .cb-ns { clear: both; }
+ .cn-ns { clear: none; }
+}
+
+@media screen and (min-width: 48em) and (max-width: 64em) {
+ .cl-m { clear: left; }
+ .cr-m { clear: right; }
+ .cb-m { clear: both; }
+ .cn-m { clear: none; }
+}
+
+@media screen and (min-width: 64em) {
+ .cl-l { clear: left; }
+ .cr-l { clear: right; }
+ .cb-l { clear: both; }
+ .cn-l { clear: none; }
+}
 
 </code>
 </pre>
@@ -157,7 +181,7 @@
         <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/box-sizing" title="Box Sizing">Box Sizing</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/spacing" title="Spacing">Spacing</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/floats" title="Floats">Floats</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/clearfix" title="Clears">Clearfix</a>
+        <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/clears" title="Clears">Clears</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/display" title="Display">Display</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/widths" title="Widths">Widths</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/layout/max-widths" title="Max Widths">Max Widths</a>

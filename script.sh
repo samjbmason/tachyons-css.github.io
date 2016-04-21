@@ -5,7 +5,7 @@ repos=(
   "src/modules/border-radius.js"
   "src/modules/borders.js"
   "src/modules/box-sizing.js"
-  "src/modules/clearfix.js"
+  "src/modules/clears.js"
   "src/modules/debug.js"
   "src/modules/display.js"
   "src/modules/docs.js"

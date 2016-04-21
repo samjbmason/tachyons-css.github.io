@@ -11,14 +11,14 @@ var moduleObj = cssstats(moduleCss)
 var moduleSize = filesize(moduleObj.gzipSize)
 var moduleName = module.name
 
-var srcCSS = fs.readFileSync('./src/css/_clearfix.css', 'utf8')
+var srcCSS = fs.readFileSync('./src/css/_clears.css', 'utf8')
 var navDocs = fs.readFileSync('./src/templates/nav_docs.html', 'utf8')
 var siteFooter = fs.readFileSync('./src/templates/footer.html', 'utf8')
 var siteHeader = fs.readFileSync('./src/templates/header.html', 'utf8')
 var head = fs.readFileSync('./src/templates/head.html', 'utf8')
 var googleAnalytics = fs.readFileSync('./src/templates/ga.html', 'utf8')
 
-var template = fs.readFileSync('./src/templates/docs/clearfix/index.html', 'utf8')
+var template = fs.readFileSync('./src/templates/docs/clears/index.html', 'utf8')
 var tpl = _.template(template)
 var html = tpl({
   moduleVersion: module.version,
@@ -33,4 +33,4 @@ var html = tpl({
   siteHeader: siteHeader
 })
 
-fs.writeFileSync('./docs/layout/clearfix/index.html', html)
+fs.writeFileSync('./docs/layout/clears/index.html', html)
